@@ -302,7 +302,7 @@ section{
     background-image: url(visuals/pong.png);
 }
 .img-6 {
-    background-image: url(visuals/idk.jpg);
+    background-image: url(visuals/port.png);
 }
 .box {
     background: #0b0b13;
@@ -314,7 +314,7 @@ section{
 .box img {
     width: 100px;
     height: auto;
-
+    
 }
 .contact-section {
     display: flex;
