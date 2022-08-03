@@ -11,7 +11,7 @@
 :root {
     --bg-color: rgb(36, 45, 54);
     --prim-color: #3ce2be;
-    --sec-color: #dadadac5;
+    --sec-color: #ebe9e9c5;
     --text-color: #fff;
     --large-font: 5.5rem;
     --h2-font: 1.9rem;
@@ -59,10 +59,12 @@ span {
     font-size: 70px;
     color: #ffffff;
     transition: 0.2s;
+    padding: 0px 5px;
     z-index: 2;
 }
 #social:hover {
     transform: translateY(-10px);
+    color: var(--prim-color);
 }
 #menu-icon {
     font-size: 28px;
@@ -104,7 +106,7 @@ section{
     margin: 0 0 20px;
 }
 .home-text h6 {
-    color: var(--text-color);
+    color: var(--sec-color);
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 25px; 
