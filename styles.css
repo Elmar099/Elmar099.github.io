@@ -17,6 +17,10 @@
     --h2-font: 1.9rem;
     --p-font: 1.2rem;
 }
+.wave {
+    width: 55px;
+    vertical-align: middle;
+}
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -518,6 +522,9 @@ form .send-btn:hover {
 }
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
+  and (max-device-width: 796px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+    .contact-section {
+        width: 100%;
+    }
 }
