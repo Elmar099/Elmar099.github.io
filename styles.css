@@ -2,15 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto slab', sans-serif;
+    font-family:  'General Sans', sans-serif;
     text-decoration: none;
     list-style-type: none;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
 }
 :root {
-    --bg-color: rgb(36, 45, 54);
-    --prim-color: #3ce2be;
+    --bg-color: rgb(5, 5, 5);
+    --prim-color: #fcf3d2;
     --sec-color: #ebe9e9c5;
     --text-color: #fff;
     --large-font: 5.5rem;
@@ -18,7 +18,7 @@
     --p-font: 1.2rem;
 }
 .wave {
-    width: 55px;
+    width: 85px;
     vertical-align: middle;
 }
 body {
@@ -42,32 +42,79 @@ header {
     color: var(--text-color);
     font-size: 2.5rem;
     font-weight: 600;
+    transition: 0.5s;
+    position: relative; /* Required for absolute positioning of children */
+}
+i 
+.logo .original-name,
+.logo .alternate-name {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.8s;
+}
+
+.logo .alternate-name {
+    opacity: 0;
+}
+
+.logo:hover .original-name {
+    transform: rotate3d(0, 1, 0, 180deg);
+    display: none;
+}
+
+.logo:hover .alternate-name {
+    opacity: 1;
 }
 span {
     color: var(--prim-color);
 }
+.f-span {
+    display: block;
+}
+.l-span {
+    -webkit-text-stroke: 1px var(--prim-color); 
+    -webkit-text-fill-color: transparent;
+}
 .navbar {
     display: flex;
 }
+
 .navbar a {
     color: var(--text-color);
     font-size: 1.2rem;
     padding: 10px 15px;
     font-weight: 500;
-    transition: color .3s;
+    position: relative; 
 }
-.navbar a:hover {
-    color: var(--prim-color);
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; 
+    background-color: transparent; 
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0) translateY(-20px); 
+    transform-origin: left;
+    transition: transform 0.3s ease; 
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1) translateY(-20px);
+    background-color: var(--prim-color); 
 }
 #social {
     font-size: 70px;
     color: #ffffff;
-    transition: 0.2s;
+    transition: 0.5s;
     padding: 0px 5px;
     z-index: 2;
 }
 #social:hover {
-    transform: translateY(-10px);
+    transform: rotate3d(0, 1, 0, 360deg);
     color: var(--prim-color);
 }
 #menu-icon {
@@ -80,31 +127,24 @@ section{
     padding: 110px 18%;
 }
 .home {
-    background-image: linear-gradient(rgba(33,33,33,.5),
-    rgba(33,33,33,.5)) , url(visuals/bgimg9.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(46, 46, 46, 0.5)); /* Adjust the alpha values as needed */
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
-.home-img img{
-    max-width: 100%;
-    width: 700px;
-    height: auto;
-}
+
 #down {
     font-size: 29px;
     vertical-align: middle;
     padding-left: 2px;
 }
 .home-text h1 {
-    font-size: var(--large-font);
+    font-size: 9rem;
     color: var(--text-color);
+    text-align: left;
     font-weight: 700;
     line-height: 1;
     margin: 0 0 20px;
@@ -146,7 +186,7 @@ section{
     grid-template-columns: repeat(2, 2fr);
     gap: 5rem;
     align-items: center;
-    background-color: #0e111a;
+    background: linear-gradient(to bottom, rgba(46, 46, 46, 0.5), rgba(0, 0, 0, 1)); /* Adjust the alpha values as needed */
 }
 .about-img img {
     max-width: 80%;
@@ -197,11 +237,11 @@ section{
     height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(156, 159, 160);
+    background: var(--prim-color);
     border-radius: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: rgb(44, 49, 66);
+    background: rgb(12, 12, 12);
 }
 .center {
     text-align: center;
@@ -220,7 +260,7 @@ section{
     margin-top: 4.4rem;
 }
 .projects{
-    background-color: #151820;
+    background-color: #000000;
 }
 .education-content .row {
     padding: 70px 30px;
@@ -341,7 +381,7 @@ section{
     margin-right: 20px;
     vertical-align: middle;
     font-size: 30px;
-    color: #3ce2be;
+    color: var(--prim-color);
 }
 .contact-info, .contact-form {
     flex: 1;
@@ -397,7 +437,7 @@ form .send-btn:hover {
     text-align: center;
     padding: 40px;
     color: var(--sec-color);
-    background: #0b0b13;
+    background: #0a0a0a;
     
     line-height: 1.8rem;
 }
@@ -458,7 +498,6 @@ form .send-btn:hover {
         display: block;
         padding: 0.5rem;
         margin: 1rem;
-        display: block;
     }
     .navbar.active{
         top: 0%;
