@@ -4,6 +4,28 @@ let bar = document.querySelector('.header')
 const body = document.body;
 let lastScroll = 0;
 
+document.addEventListener('DOMContentLoaded', function () {
+    const interBubble = document.querySelector('.interactive');
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+
+    function move() {
+        curX += (tgX - curX) / 90;
+        curY += (tgY - curY) / 90;
+        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        requestAnimationFrame(move);
+    }
+
+    window.addEventListener('mousemove', function (event) {
+        tgX = event.clientX;
+        tgY = event.clientY;
+    });
+
+    move();
+});
+
 drop.onclick = () => {
     drop.classList.toggle('bx-x')
     nav.classList.toggle('active')
@@ -35,10 +57,10 @@ window.addEventListener('scroll', () => {
 
 })
 const scrl = ScrollReveal ({
-    distance: '60px',
-    duration: 1500,
+    distance: '0px',
+    duration: 5000,
     reset: false
 })
 
-scrl.reveal('.home-text',{delay: 100, origin: 'top', reset: true})
+scrl.reveal('.home-text',{delay: 200, origin: 'top', reset: true})
 scrl.reveal('.about, .education, .projects, .skills, .contact',{delay: 100, origin: 'top'})

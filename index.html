@@ -14,171 +14,76 @@
 </head>
 <body>
 <!-- header -->
-    <header class="header">
-        <a href="#home" class="logo"></i> <span class="original-name">Elmar <i class='bx bxs-cube-alt bx-spin' ></i></span>
-            <span class="alternate-name">Imanov</span></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
 
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
-<!-- home -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h3>Hey, I'm</h3><h1><span class="f-span">Elmar</span><span class="l-span">Imanov</span> <img class="wave"
-                src="https://media1.giphy.com/media/WFZvB7VIXBgiz3oDXE/giphy.gif?cid=790b76110c89d38c12d48fd8f7984d64449d491e233fbe1c&rid=giphy.gif&ct=s" alt="wave gif"></h1>
-            <h6>A <span>Full-stack</span> Developer from Sunnyvale, California</h6>
-            <a target="_blank" href="https://www.linkedin.com/in/elmar-imanov/"><i class='bx bxl-linkedin-square' id="social"></i></a>
-            <a target="_blank" href="https://github.com/Elmar099"><i class='bx bxl-github' id="social"></i></a>
-        </div> 
+<!--
+<div> home -->
+    
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+            <div class="gradients-container">
+                <div class="circle g1"></div>
+                <div class="circle g2"></div>
+                <div class="circle g3"></div>
+                <div class="circle g4"></div>
+                <div class="circle g5"></div>
+                <div class="circle g6"></div>
+                <div class="circle g7"></div>
+                <div class="interactive"></div>
+            </div>
+            <header class="header">
+                <a href="#home" class="myLogo"><img class="logo" data-value="5" src="visuals/logElm.png" alt="mylogo"></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
         
-    </section>
-<!-- About -->
-    <section class="about" id="about">
+                <ul class="navbar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </header>
+            <section class="home-text">
+                <h1><span class="f-span">Elmar</span><span class="l-span">Imanov;</span> </h1>
+                <h6>A <span>Full-stack</span> Developer from Sunnyvale, California</h6>
+                <a target="_blank" href="https://www.linkedin.com/in/elmar-imanov/"><i class='bx bxl-linkedin-square' id="social"></i></a>
+                <a target="_blank" href="https://github.com/Elmar099"><i class='bx bxl-github' id="social"></i></a>
+            </section>
+        </div>   
+        <section id="about" class="card1">
+            <div class="about-text">       
+                WORK IN PROGRESS...
+            </div>
+        </section>
+        <section id="projects" class="card2">
+            <div>WORK IN PROGRESS...</div>
+        </section>
+        <section id="contact"class="card3">
+            <div>WORK IN PROGRESS...</div>
         
-        <div class="about-img">
-            <img src="visuals/profmr.jpg" alt="porfile picture">
+        </section>
+        <div class="copy">
+            <p>Copyright © 2022 All rights reserved. | Created By <span>Elmar </span> Imanov</p>
         </div>
-
-        <div class="about-text">       
-            <h3>About <span>Me</span></h3>
-            <h2>I am a coder with love for both front-end and back-end.</h2>
-            <p>I moved to California when I was 9 years old and found comfort in computers. I enjoy programming for about 1-2 hours everyday
-                and really love the problem solving aspect of it the most. Other than school and coding, I like to play piano, soccer 
-                and hangout with friends to spend my time. 
-            </p>
-            <div class="count">
-                <a href="#about"><span>20+ </span>Projects Completed.</a>
-                <a href="#about"><span>4</span>Years Completed.</a>
-            </div>
-            <div class="main-btn">
-                <a target="_blank" href="downloads/Elmar_Imanov_Résumé.pdf" class="btn">View Resume<i class='bx bxs-download' id="down"></i></a>
-            </div>
-        </div>
+<!-- 
+    <section id="about" class="card1">
+        <div>card1</div>
     </section>
-    <!--
-    <section class="education" id="education">
-        <div class="center">
-            <h3>-Education-</h3>
-        </div>
-        <div class="education-content">
-            <div class="row">
-                <i class='bx bxs-graduation'></i>
-                <h5>GPA: 3.6 - December 2023</h5>
-                <h3><a class="school" target="_blank" href="https://www.sjsu.edu/">San Jose State University</a></h3>
-                
-                <p>I graduated from SJSU where I earned my Bachelors degree in Computer Science in Fall of 2023.
-                </p>
-                
-            </div>
-            <div class="row">
-                <i class="bx bxs-school"></i>
-                <h5>GPA: 3.7 - July 2020</h5>
-                <h3> <a class="school" target="_blank" href="https://www.deanza.edu/">De Anza College</a></h3>
-                <p>I recieved my Associates degree in Computer Science with Honors from De Anza in Spring of 2020.
-                </p>
-            </div>
-        </div>
-
-    </section> Education -->
-     <!-- Projects -->
-     <section class="projects" id="projects">
-        <div class="center">
-            <h3>Projects</h3>
-        </div>
-        <div class="projects-content">
-            <div class="row">
-                <div class="row-image img-1"></div>
-                <i class='bx bxs-lock' ></i>
-                <h3>PassLock</h3>
-                <p>This is an password manager made using Java and SQL for database. 
-                    This is a crud application that encypts/decrypts passwords for any website.
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/Password-Manager">View Code</a>
-            </div>
-            <div class="row">
-                <div class="row-image img-4"></div>
-                <i class='bx bx-map' ></i>
-                <h3>Locate ME</h3>
-                <p>A Geo-locator application made using JavaScript, HTML/CSS and leaflet API to log the 
-                    location of best Restaurants, their names and the date into a file-based database. 
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/LocateMe">View Code</a>
-            </div>
-            <div class="row">
-                <div class="row-image img-3"></div>
-                <i class='bx bx-scatter-chart' ></i>
-                <h3>Global Temps</h3>
-                <p>Made using JavaScript, implementing the fetch API as well as chart.js in order
-                    to plot a csv file of Global Temperatures to visualize Climate Change.
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/GlobalTemp">View Code</a>
-            </div>
-            <div class="row">
-                <div class="row-image img-2"></div>
-                <i class='bx bx-money-withdraw' ></i>
-                <h3>Tipper</h3>
-                <p>This app is made using HTML/CSS and JavaScript.
-                    This application calculates the tip amount given total price and no. of friends.
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/Tipper">View Code</a>
-            </div>
-            <div class="row">
-                <div class="row-image img-5"></div>
-                <i class='bx bx-game' ></i>
-                <h3>Pong Game</h3>
-                <p>Classic Ping Pong game made using the Python turtle library in order to practice 
-                    using Python libraries as well as math in Python. 
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/PongGame">View Code</a>
-            </div>
-            <div class="row">
-                <div class="row-image img-6"></div>
-                <i class='bx bx-spreadsheet'></i>
-                <h3>Portfolio website</h3>
-                <p>This website is my personal portflio website and I decided
-                    to put it here since it took me a while to get right and 
-                    I'm proud of it.
-                </p>
-                <a target="_blank" href="https://github.com/Elmar099/Elmar099.github.io">View Code</a>
-            </div>
-        </div>
-
+    <section id="projects" class="card2">
+        <div>card2</div>
     </section>
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="center">
-            <h3>Let's Talk!</h3>
-        </div>
-        <div class="contact-section">
-            <div class="contact-info">
-                <h2>Contacts</h2>
-                <p class="">Reach out to me using my email below or
-                    fill out the form to directly send me a message and say hello. 
-                </p>
-                <div><i class='bx bx-user' ></i>Elmar Imanov</div>
-                <div><i class='bx bx-envelope' ></i>elmarnov22@gmail.com</div>
-                <div><i class='bx bx-map' ></i>Sunnyvale California</div>
-                <div><i class='bx bx-time-five' > </i>Mon - Fri 7:00 AM - 9:00 PM</div>
-            </div>
-        <div class="contact-form">
-            <form action="mailto:elmar6999@gmail.com">
-                <input type="" placeholder="Name" required>
-                <input type="email" name="" id="" placeholder="Email" required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..." required></textarea>
-                <input type="submit" name="" value="Send Email "  class="send-btn"> 
-            </form>
-        </div>
-    </div>
-    </section>
-    <!-- copyright -->
-    <div class="copy">
-        <p>Copyright © 2022 All rights reserved. | Created By <span>Elmar </span> Imanov</p>
-    </div>
+    <section id="contact"class="card3">
+        <div>card3</div>
+    </section>About -->
+
+    <!-- 
+    copyright -->
     <!-- JavaScript Links-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js"></script>
