@@ -9,7 +9,7 @@
     scroll-padding-top: 2rem;
 }
 :root {
-    --bg-color: rgb(5, 5, 5);
+    --bg-color: rgb(8, 8, 7);
     --prim-color: #cfc7ab;
     --sec-color: #ebe9e9c5;
     --text-color: #fff;
@@ -63,12 +63,11 @@
       transform: translateX(-50%) translateY(-10%);
     }
   }
-.gradient-bg {
+  .gradient-bg {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: hsl(88, 25%, 11%, .5);
+    position: relative; 
+    background: rbg(15, 15, 16);
     top: 0;
     left: 0;
 }
@@ -97,8 +96,6 @@ svg {
 
     opacity: 1;
   }
-  
-
   .g2 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
@@ -113,7 +110,6 @@ svg {
 
     opacity: 1;
   }
-
   .g3 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
@@ -129,7 +125,6 @@ svg {
 
     opacity: 1;
   }
-
   .g4 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
@@ -145,7 +140,6 @@ svg {
 
     opacity: 1;
   }
-
   .g5 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
@@ -191,7 +185,6 @@ svg {
 
     opacity: 1;
   }
-
 .interactive {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
@@ -206,10 +199,9 @@ svg {
 }
 
 .card1{
-    position: relative;
     width: 100vw;
     height: 100vh;
-    background: hsl(88, 25%, 11%, .5);
+    /*background-color: rgb(22, 22, 22);*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,6 +210,9 @@ svg {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     overflow: hidden; 
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) brightness(110%) saturate(120%); /* Adjust the blur radius and additional filters */
+    -webkit-backdrop-filter: blur(20px) brightness(110%) saturate(120%);
 }
 .card2{
     width: 100vw;
@@ -246,16 +241,11 @@ svg {
     overflow: hidden; 
 }
 .logo {
-    width: 120px;
-    opacity: 0.7;
-    transition: transform 0.3s ease;
+    width: 110px;
+    transition: transform 0.8s ease;
 }
 .logo:hover{
     transform: scale(0.9);
-}
-.wave {
-    width: 85px;
-    vertical-align: middle;
 }
 body {
     background-color: var(--bg-color);
@@ -272,7 +262,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 10px 14% 20px 14%;
+    padding: 10px 5% 20px 5%;
     transition: .5s;
 }
 .home-text {
@@ -280,30 +270,25 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    padding: 220px 14% 20px 14%;
+    padding: 230px 14% 20px 14%;
+    cursor: default;
 }
 .home-text h1 {
-    font-size: 9rem;
+    font-size: 10rem;
     color: var(--text-color);
     text-align: left;
+    letter-spacing: 0.6rem;
     font-weight: 700;
     line-height: 1;
     margin: 0 0 20px;
 }
 .home-text h6 {
     color: var(--sec-color);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 25px; 
 }
-.home-text p {
-    max-width: 650px;
-    font-size: var(--p-font);
-    font-weight: 300;
-    line-height: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--sec-color);
-}
+
 span {
     color: var(--prim-color);
 }
@@ -321,6 +306,7 @@ span {
 .navbar a {
     color: var(--prim-color);
     font-size: 1.2rem;
+    letter-spacing: 0.2rem;
     padding: 10px 15px;
     font-weight: 500;
     position: relative; 
@@ -347,7 +333,7 @@ li {
     transition: transform 0.3s ease-in-out;
 }
 li:hover {
-    transform: scaleX(1.2);
+    transform: scale(1.1);
 }
 #social {
     font-size: 70px;
@@ -366,16 +352,20 @@ li:hover {
     cursor: pointer;
     display: none;
 }
+.about-text {
+    display: grid;
+    margin: 0 auto;
+    max-width: 900px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
+}
+.about-text div{
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 10px;
+    padding: 100px;
+}
 
-.center {
-    text-align: center;
-}
-.center h3 {
-    color: var(--text-color);
-    font-size: 35px;
-    font-weight: 300;
-    letter-spacing: 3px;
-}
 .box {
     background: #0b0b13;
     padding: 40px 30px;
@@ -401,11 +391,6 @@ li:hover {
    transform: translate3d(0, -100%, 0);
 }
 .scroll-up header {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(10px);
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     transition: 0.1s;
     border: none;
 }
