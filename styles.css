@@ -10,7 +10,7 @@
 }
 :root {
     --bg-color: rgb(8, 8, 7);
-    --prim-color: rgb(231, 230, 223);
+    --prim-color: rgb(231, 228, 202);
     --blk-color: rgb(53, 53, 53);
     --sec-color: #ebe9e9c5;
     --text-color: #fff;
@@ -18,14 +18,14 @@
     --h2-font: 1.9rem;
     --p-font: 1.2rem;
 
-    --color1: 255, 255, 255;
-    --color2: 255, 255, 255;
-    --color3: 255, 255, 255;
-    --color4: 255, 255, 255;
-    --color5: 255, 255, 255;
-    --color6: 255, 255, 255;
-    --color7: 255, 255, 255;
-    --color-interactive: 255, 255, 255;
+    --color1: 139, 62, 238;
+    --color2: 232, 62, 238;
+    --color3: 238, 62, 145;
+    --color4: 238, 169, 62;
+    --color5: 12, 123, 211;
+    --color6: 221, 148, 21;
+    --color7: 118, 21, 221;
+    --color-interactive: 246, 49, 97;
     --circle-size: 50%;
     --blending: soft-light;
 }
@@ -219,6 +219,7 @@ svg {
 }
 .logo:hover{
     transform: scale(0.9);
+    filter: grayscale(0%);
 }
 body {
     background-color: var(--bg-color);
@@ -259,17 +260,18 @@ header {
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 25px; 
-    color: var(--bg-color);
+    color: var(--prim-color);
 }
 .stack {
-    color: var(--blk-color);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 .f-span {
-    color: var(--bg-color);
+    color: var(--prim-color);
     display: block;
 }
 .l-span {
-    -webkit-text-stroke: 2px var(--bg-color); 
+    -webkit-text-stroke: 2px var(--prim-color); 
     -webkit-text-fill-color: transparent;
 }
 .navbar {
@@ -287,7 +289,7 @@ header {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px; 
+    height: 3px; 
     background-color: transparent; 
     bottom: 0;
     left: 0;
@@ -298,7 +300,7 @@ header {
 .navbar a:hover::before {
     color: var(--bg-color);
     transform: scaleX(1);
-    background-color: var(--bg-color); 
+    background-color: var(--prim-color); 
 }
 .navbar li {
     transition: transform 0.3s ease-in-out;
@@ -311,11 +313,11 @@ header {
     transition: 0.5s;
     padding: 0px 5px;
     z-index: 2;
-    color: var(--bg-color);
+    color: var(--prim-color);
 }
 #social:hover {
     transform: rotateY(360deg);
-    color: #247da0;
+    color: #ebebeb;
 }
 #menu-icon {
     font-size: 28px;
@@ -341,6 +343,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: -1;
 }
 .about-col-1{
     flex-basis: 35%;
@@ -373,7 +376,7 @@ header {
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: 500;
     color: var(--blk-color);
     cursor: pointer;
@@ -388,21 +391,22 @@ header {
     left: 0;
     bottom: -8px;
     transition: 0.5s;
-    transform: translateY(-18px);
+    transform: translateY(-23px);
 }
 .tab-links.active-link::after{
     width: 100%;
-    transform: translateY(-18px);
+    transform: translateY(-23px);
 }
 .tab-contents ul li{
     list-style-type: none;
+    color: rgb(150, 150, 150);
     margin: 10px 0;
 }
 .tab-contents ul li span{
     color: #000000;
     letter-spacing: 2px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
 }
 .tab-contents{
