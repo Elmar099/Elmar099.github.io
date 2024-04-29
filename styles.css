@@ -245,7 +245,7 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    padding: 230px 14% 20px 14%;
+    padding: 230px 14% 100px 14%;
     cursor: default;
 }
 .home-text h1 {
@@ -264,7 +264,7 @@ header {
 }
 .stack {
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: 500;
 }
 .f-span {
     color: var(--prim-color);
@@ -356,6 +356,8 @@ header {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: transform 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
 }
 .about-col-1 img:hover{
     cursor: pointer;
@@ -433,32 +435,46 @@ header {
     background-color: rgb(228, 226, 216);
     background-image: url(assets/noisee.png);
 }
+#projects .sub-title{
+    margin-bottom: 50px;
+}
 .project-grid {
     --gap: 10px;
     --num-cols: 3;
     --row-height: 300px;
 
-    padding: 4rem 16px 0px 16px;
+
     display: grid;
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
     gap: var(--gap);    
 }
 #projects a {
-    background-color: white ;
-    padding: 10px 20px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 0px 8px;
     margin-top: 15px;
-    border-radius: 12px;
-    transition: opacity 0.3s;
+    transition: transform 0.3s;
+}
+#projects i {
+    font-size: 35px;
+    color: #fff;
 }
 #projects a:hover {
-    opacity: 0.8;
+    transform: scale(1.1);
 }
 .hov-card {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.3s ease-out;
     position: relative;
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
-.hov-card1{
-    grid-column: span 2;
+.hov-card:hover{
+    transform: translateY(-5px) scale(1.005);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 .hov-card img {
     width: 100%;
@@ -466,6 +482,10 @@ header {
     object-fit: cover;
     border-radius: 22px;
     transition: transform 0.3s;
+}
+.hov-card img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 .desc {
     --text-s: 14px;
@@ -476,7 +496,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -489,6 +509,9 @@ header {
 .desc:hover { 
     opacity: 1;
 }
+.desc h2 {
+    font-weight: 500;
+}
 .project-grid-col-2 {
     grid-column: span 2;
 }
@@ -496,21 +519,13 @@ header {
     grid-row: span 2;
 }
 
-.box {
-    background: #0b0b13;
-    padding: 40px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .40s;
-}
-.copy {
-    position: absolute;
-    text-align: center;
-    padding: 40px;
-    color: var(--sec-color);
-    background: hsl(88, 25%, 11%, .5);
-    line-height: 1.8rem;
-    text-align: center;
+#skills{
+    padding: 80px 14%;
+    color: #ababab;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(228, 226, 216);
+    background-image: url(assets/noisee.png);
 }
 .scroll-down header {
    transform: translate3d(0, -100%, 0);
@@ -530,51 +545,117 @@ header {
 ::-webkit-scrollbar-track {
     background: rgb(12, 12, 12);
 }
-@media (max-width: 1430px) {
+@media (max-width: 1530px) {
     header{
         padding: 25px 3%;
     }
-    section {
-        padding: 50px 3%;
+    #projects {
+        padding: 50px 5%;
     }
-    :root {
-        --large-font: 3rem;
-        --h2-font: 1.2rem;
+    #about {
+        padding: 50px 5%;
     }
+    .sub-title {
+        font-size: 90px;
+    }
+    .about-p {
+        font-size: 18px;
+        padding-right: 50px;
+    }
+    .tab-titles{
+        margin: 20px 0 40px;
+    }
+    .tab-links{
+        font-size: 20px;
+    }
+    .tab-contents ul li span{
+        font-size: 20px;
+    }
+    .about-col-1 img{
+        height: 550px;
+    }
+    .logo {
+        width: 100px;
+    }
+
 }
-@media (max-width: 1024px) {
+@media (max-width: 1230px) {
     :root {
         --large-font: 3rem;
         --h2-font: 1.2rem;
         --p-font: 0.9rem;
     }
-    .home {
-        height: 70vh;
-    }
+
     .project-grid {
         --num-cols: 2;
         --row-heights: 200px;
     }
+    #projects {
+        padding: 10px 3%;
+    }
+    #about {
+        padding: 10px 3%;
+    }
+    .sub-title {
+        font-size: 70px;
+    }
+    .about-p {
+        font-size: 15px;
+        padding-right: 20px;
+    }
+    .tab-titles{
+        margin: 20px 0 40px;
+    }
+    .tab-links{
+        font-size: 17px;
+    }
+    .tab-contents ul li span{
+        font-size: 16px;
+    }
+    .about-col-1 img{
+        height: 450px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .home-text {
+        padding: 260px 10% 100px 10%;
+    }
+    .home-text h1 {
+        font-size: 8rem;
+    }
+    .home-text h6 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #social{
+        font-size: 50px;
+    }
+
 }
 @media (max-width: 1000px) {
     header {
         padding: 18px 3%;
     }
     #menu-icon{
+        color: var(--blk-color);
+        font-size: 40px;
         display: block;
     }
     .navbar{
         position: absolute;
-        top: -700px ;
+        top: -700px;
         left: 0;
         right: 0;
         display: flex;
         flex-direction: column;
+        background-color: rgb(228, 226, 216);
         box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
         text-align: center;
         transition: 0.3s ease-in-out;
     }
     .navbar a {
+        color: #000;
         display: block;
         padding: 0.5rem;
         margin: 1rem;
@@ -582,75 +663,82 @@ header {
     .navbar.active{
         top: 0%;
     }
-}
-@media (max-width: 795px) {
-    
-    .header a {
-        font-size: 30px;
+    .logo {
+        width: 90px;
     }
-    .home-text h1{
-        font-size: 100px;
+    
+
+}
+@media (max-width: 910px){
+    .home-text {
+        padding: 290px 5% 100px 5%;
+    }
+    .home-text h1 {
+        font-size: 8rem;
     }
     .home-text h6 {
-        font-size: 30px;
+        font-size: 19px;
     }
-    #social {
-        font-size: 65px;
+    #social{
+        font-size: 45px;
     }
+}
+@media (max-width: 820px) {
+    .home-text {
+        padding: 290px 5% 100px 5%;
+    }
+    .home-text h1 {
+        font-size: 7rem;
+    }
+    .home-text h6 {
+        font-size: 20px;
+    }
+    #social{
+        font-size: 45px;
+    }
+    .sub-title {
+        font-size: 60px;
+    }
+    .project-grid {
+        --num-cols: 2;
+        --row-heights: 200px;
+    }
+
 }
 @media (max-width: 375px) {
     .header a {
         font-size: 30px;
     }
     body{
-        overflow-x: hidden;
+        max-width: 21px;
+    }
+    .project-grid {
+        --num-cols: 1;
+        --row-heights: 200px;
     }
     .home-text h1{
         font-size: 40px;
     }
     .home-text h6 {
-        font-size: 20px;
+        font-size: 18px;
     }
     #social {
-        font-size: 45px;
+        font-size: 40px;
     }
     .sub-title {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 110%;
     }
     .about-p{
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px;
-
     }
     .tab-links{
         font-size: 12px;
     }
     .about-col-1 img{
-        margin-top: 20px;
-        width: 300px;
-    }
-}
-@media screen and (max-width: 895px){
-    .contact-section{
-        flex-direction: column;
-    }
-    .contact-info, .contact-form{
-        margin: 30px 50px;
-    }
-    .contact-info h2 {
-        font-size: 30px;
-        
-    }
-    .contact-info p {
-        font-size: 14px;
-    }
-}
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 796px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .contact-section {
+        height: 200px;
         width: 100%;
+        margin: 20px 70%;
     }
 }
