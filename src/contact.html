@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elmar's Portfolio</title>
     <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
     <script src="../js/script.js" type="text/javascript"></script>  
 </head>
 <body>
     <header class="header">
         <h2>Elmar Imanov</h2>
+        <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
             <li><a href="../index.html">Home</a></li>
@@ -25,7 +27,7 @@
 
     </section>
     <section class="contact-form">
-        <form id="contactForm">
+        <form action="mailto:elmarnov22@gmail.com" id="contactForm">
           <label for="name">Your Name <span>*</span></label>
           <input type="text" placeholder="Elmar Imanov" id="name" name="name" required>
           <label for="email">Email <span>*</span></label>
