@@ -209,7 +209,7 @@ svg {
 }
 body {
     background-color: var(--bg-color);
-    background-image: url(assets/noisee.png);
+    background-image: url(../assets/noisee.png);
     overflow-x: hidden;
 }
 header {
@@ -322,7 +322,7 @@ header {
     border-top-right-radius: 1.5rem;
     overflow: hidden; 
     background-color: rgb(29, 29, 28);
-    background-image: url(assets/noisee.png); 
+    background-image: url(../assets/noisee.png);
 }
 .row {
     display: flex;
@@ -416,8 +416,8 @@ header {
     color: var(--prim-color);
     width: 100vw;
     height: auto;
-    background-color: rgb(20, 20, 20);
-    background-image: url(assets/noisee.png);
+    background-color: rgb(20, 20, 20);    
+    background-image: url(../assets/noisee.png);
 }
 #projects .sub-title{
     margin-bottom: 50px;
@@ -506,7 +506,7 @@ header {
     width: 100vw;
     height: 100vh;
     background-color: rgb(29, 29, 28);
-    background-image: url(assets/noisee.png);
+    background-image: url(../assets/noisee.png);
 }
 .subsub-title{
     font-size: 65px;
@@ -540,16 +540,16 @@ header {
     width: 100vw;
     height: auto;
     background-color: rgb(36, 35, 35);
-    background-image: url(assets/noisee.png);
+    background-image: url(../assets/noisee.png);
 }
 .contact{
+    margin-top: 50px;
     text-align: center;
 }
 .contact .sub-title {
     font-size: 150px;
     margin-bottom: 100px;
     cursor: pointer;
-    text-decoration: underline 5px;
 }
 .contact p {
     font-size: 30px;

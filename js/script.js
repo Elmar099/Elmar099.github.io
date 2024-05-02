@@ -77,4 +77,4 @@ const scrl = ScrollReveal ({
 })
 
 scrl.reveal('.home-text',{delay: 200, origin: 'top', reset: true})
-scrl.reveal('.about, .education, .projects, .skills, .contact',{delay: 100, origin: 'top'})
+scrl.reveal('.about, .education, .projects, .skills, .copyright',{delay: 100, origin: 'top'})
