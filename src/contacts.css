@@ -73,7 +73,14 @@ span {
     font-size: 22px;
     color: rgb(179, 94, 94);
 }
-  
+.butts {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.butts a {
+    color: var(--prim-color);
+}
 .contact-form label {
     display: block;
     margin-bottom: 10px;
@@ -113,6 +120,7 @@ span {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 100px;
+    margin-right: 10px;
   }
   
 .contact-form button:hover {
@@ -130,6 +138,13 @@ span {
 }
 #copyright a:hover{
     color: #d3d3d3;
+}
+.socials {
+    color: var(--blk-color)
+}
+.socials a {
+    color: var(--blk-color);
+    text-decoration: none;
 }
 .up {
     font-size: 70px;

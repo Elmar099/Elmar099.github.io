@@ -11,6 +11,7 @@
 :root {
     --bg-color: rgb(8, 8, 7);
     --prim-color: rgb(221, 219, 202);
+    --orang: #cf5812;
     --blk-color: rgb(53, 53, 53);
     --sec-color: #ebe9e9c5;
     --text-color: #fff;
@@ -383,7 +384,7 @@ header {
     content: '';
     width: 0;
     height: 2px;
-    background:  #808080;
+    background:  var(--orang);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -457,7 +458,7 @@ header {
 }
 .hov-card:hover{
     transform: translateY(-5px) scale(1.005);
-    border: 2px dashed rgb(255, 175, 3);
+    border: 2px solid var(--orang);
 }
 .hov-card img {
     width: 100%;
@@ -505,7 +506,7 @@ header {
     padding: 80px 14%;
     color: var(--prim-color);
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     background-color: rgb(29, 29, 28);
     background-image: url(../assets/noisee.png);
 }
@@ -539,9 +540,12 @@ header {
     padding: 30px 14%;
     color: var(--prim-color);
     width: 100vw;
-    height: auto;
+    height: 100vh;
     background-color: rgb(36, 35, 35);
     background-image: url(../assets/noisee.png);
+}
+.contains {
+    text-align: center;
 }
 .contact{
     margin-top: 50px;
@@ -561,7 +565,7 @@ header {
     position: absolute;
     width: 100%;
     height: 3px; 
-    background-color: transparent; 
+    background-color: transparent;
     bottom: 0;
     left: 0;
     transform: scaleX(0); 
@@ -569,9 +573,8 @@ header {
     transition: 0.7s ease-in-out; 
 }
 .contact .sub-title:hover::before {
-    color: var(--prim-color);
     transform: scaleX(1);
-    background-color: var(--prim-color); 
+    background-color: var(--orang); 
 }
 .contact p {
     font-size: 30px;
